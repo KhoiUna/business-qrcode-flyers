@@ -1,0 +1,4 @@
+/node_modules
+/pdf/*
+/img/*
+.env
