@@ -1,13 +1,12 @@
 # Business QRcode Flyers
 
-- This is the project we did for the Black Business Expo. We are trying to create QRcode flyers for businesses so customers can scan and contact them.
+- This is the project we did for the Black Business Expo. We are trying to create QR code flyers for the vendors so customers can scan and contact them.
 
-- **Problem:** Having to manually create QRcode flyers for businesses, then export them as PDF.
-
+- **Problem:** Having to manually design and create QR code flyers, then export them as PDF.
 - **Solution:**
-
-  - Use PHP to generate websites with the QRcode images on with [QR code API](https://goqr.me/api/) to generate QRcode linking to business contact forms.
-  - Use `pdf_from_html_generator` to screenshot the QRcode images and generate a PDF.
+   - Use HTML and Bootstrap to design web pages.
+   - Use PHP to generate websites with the QR code images on with QR code API to generate QR code linking to business contact forms.
+   - Write JavaScript and Python script to screenshot web pages and generate PDFs so vendors can print them and put on their kiosks.
 
 ## Instructions using `pdf_from_html_generator`:
 
