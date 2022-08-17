@@ -17,6 +17,8 @@
 
 ## Instructions using `pdf_from_html_generator`:
 
+- Edit `sample_config.php` with your database credentials and change file name to `config.php`.
+
 1. `cd pdf_from_html_generator`
 2. `npm i` then `pip install -r requirements.txt`
 3. Create `.env` file based on `sample.env` with your env variables
