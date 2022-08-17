@@ -15,4 +15,4 @@
 3. Create `.env` file based on `sample.env` with your env variables
 4. `mkdir img pdf` to create `/img` & `/pdf` folder
 5. Run `./shot.sh` to run `node screenshot.js` which captures webpage and save them as a `.png` image
-6. Run `./pdf.sh` to convert all `.png` files in `/img` folder to `.pdf` and save in `/pdf` folder
+6. Run `./pdf.sh` to run Python code to convert all `.png` files in `/img` folder to `.pdf` and save in `/pdf` folder
