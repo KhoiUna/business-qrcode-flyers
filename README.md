@@ -4,9 +4,9 @@
 
 - **Problem:** Having to manually design and create QR code flyers, then export them as PDF.
 - **Solution:**
-   - Use HTML and Bootstrap to design web pages.
-   - Use PHP to generate websites with the QR code images on with QR code API to generate QR code linking to business contact forms.
-   - Write JavaScript and Python script to screenshot web pages and generate PDFs so vendors can print them and put on their kiosks.
+  - Use HTML and Bootstrap to design web pages.
+  - Use PHP to generate websites with the QR code images on with QR code API to generate QR code linking to business contact forms.
+  - Write JavaScript and Python script to screenshot web pages and generate PDFs so vendors can print them and put on their kiosks.
 
 ## Instructions using `pdf_from_html_generator`:
 
