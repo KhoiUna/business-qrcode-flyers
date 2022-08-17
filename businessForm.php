@@ -1,15 +1,5 @@
 <?php
-$servername = "<your server ip>";
-$username = "<your server username>";
-$password = "<your server password>";
-$dbname = "your database name";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+require_once("config.php");
 
 //GET query
 $index = $_GET["index"];
