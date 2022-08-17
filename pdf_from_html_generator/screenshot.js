@@ -12,16 +12,15 @@ const screenshot = async (url, index) => {
     deviceScaleFactor: 1,
   });
 
-  const maxTimeOut = 60000; // 1 minute
+  const maxTimeOut = 60000; // 2 minutes
   page.setDefaultTimeout(maxTimeOut);
   page.setDefaultNavigationTimeout(maxTimeOut);
-  await page.waitForTimeout(maxTimeOut);
+  new Promise((r) => setTimeout(r, maxTimeOut));
 
   await page.goto(url, {
     waitUntil: "networkidle2", //make sure to wait until webpage finishes loading
   });
 
-  // const fileName = new URL(url).hostname;
   const fileName = index;
 
   // Screenshot & save to img folder as png
@@ -30,12 +29,7 @@ const screenshot = async (url, index) => {
     fullPage: true,
   });
 
-  // Create pdf
-  // await page.pdf({
-  //   path: __dirname + `/pdf/${fileName}.pdf`,
-  //   format: "a4",
-  //   printBackground: true,
-  // });
+  console.log("Screenshot is done!");
 
   await browser.close();
 };
@@ -51,6 +45,7 @@ const main = () => {
 
   con.connect((err) => {
     if (err) throw err;
+    console.log("Database connected!");
 
     let urls = [];
     con.query(
@@ -58,12 +53,8 @@ const main = () => {
       async (err, results, fields) => {
         if (err) throw err;
 
-        // const baseURL = "http://localhost/businessQrFlyers";
-        const baseURL =
-          "https://fiber.utilitymonitor.io/php/khoi/businessQrFlyers";
-
         results.forEach((element, index) => {
-          urls.push(`${baseURL}?index=${index + 1}`);
+          urls.push(`${process.env.base_url}?index=${index + 1}`);
         });
 
         urls.forEach(async (url, index) => {
