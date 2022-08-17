@@ -1,15 +1,5 @@
 <?php
-$servername = "<your server ip>";
-$username = "<your server username>";
-$password = "<your server password>";
-$dbname = "your database name";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+require_once("config.php");
 
 // Get query 
 $index = $_GET["index"];
@@ -34,12 +24,6 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
-  $base_url = 'http://localhost/businessQrFlyers/';
-} else {
-  $base_url = 'https://fiber.utilitymonitor.io/php/khoi/businessQrFlyers/';
-}
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +53,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
   <main>
     <p id="desc"><?php echo $business_description ?></p>
 
-    <!-- <img class="center" id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo $base_url . "businessForm.php?index=" . $index ?>" alt="<?php echo $business_name . " QR" ?>"> -->
-    <img class="center" id="qrCode" src="<?php echo "./img/" . $index . ".png" ?>" alt="<?php echo $business_name . " QR" ?>">
+    <img class="center" id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo $base_url . "businessForm.php?index=" . $index ?>" alt="<?php echo $business_name . " QR" ?>">    
   </main>
 
   <footer>
