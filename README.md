@@ -1,7 +1,14 @@
 # Business QRcode Flyers
 
-- This is the project we did for the Black Business Expo. We are trying to create QR code flyers for the vendors so customers can scan and contact them.
+## Tech stack
 
+- **Languages:** PHP, JavaScript, Python
+- **Database:** MySQL
+- Use this [QRCode API](https://goqr.me/api/doc/create-qr-code/) to fetch QR image.
+
+## Story
+
+- This is the project we did for the Black Business Expo. We are trying to create QR code flyers for the vendors so customers can scan and contact them.
 - **Problem:** Having to manually design and create QR code flyers, then export them as PDF.
 - **Solution:**
   - Use HTML and Bootstrap to design web pages.
